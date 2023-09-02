@@ -54,6 +54,10 @@ body {
     color: #242E5299;
 }
 
+.header-nav .fa-bars {
+    display: none;
+}
+
 .header-nav button,
 .sect1-info button,
 .section-3 button {
@@ -241,4 +245,86 @@ body {
 .section-4 button:hover {
     background: var(--senary-color);
     color: var(--quinary-color);
+}
+
+/* Footer */
+
+
+
+/* Responsive */
+
+@media screen and (width <=480px) {
+
+    .header-nav button {
+        display: none;
+    }
+
+    .header-nav .fa-bars {
+        display: flex;
+        font-size: 3rem;
+        color: #000;
+    }
+
+    .header-nav-bar {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        background-color: rgba(36, 0, 77, 0.8);
+        backdrop-filter: blur(2px);
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top: 140px;
+        z-index: 1;
+        animation: fade-in 0.2s backwards;
+    }
+
+    .header-nav-bar.active {
+        display: flex;
+    }
+
+    .header-nav-bar li {
+        list-style-type: none;
+        padding: 0.5rem 1rem;
+        width: 100%;
+        padding: 0;
+    }
+
+    .header-nav-bar li a {
+        color: var(--white-color);
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .header-nav-bar li a:hover {
+        color: var(--quaternary-color);
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+
+    .section-1 {
+        flex-direction: column;
+        padding: 10px 10px;
+    }
+
+    .section-1 img {
+        width: 100vw;
+        margin-bottom: 100px;
+    }
+}
+
+/* Animations */
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
