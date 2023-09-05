@@ -14,6 +14,8 @@
     --quinary-color: rgb(249, 249, 249);
     --senary-color: rgb(36, 0, 77);
     --white-color: #FFFFFF;
+    --footer-color: #1E1E26;
+    --copyright-color: #8C8C94;
 }
 
 body {
@@ -120,8 +122,16 @@ body {
     gap: 100px;
 }
 
+.section2 {
+    width: 100% !important;
+}
+
 .sect2-list {
     padding: 40px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: var(--quinary-color);
 }
 
 .sect2-different-between h2 {
@@ -142,21 +152,20 @@ body {
     flex-direction: column;
 }
 
-.section-3 {
-    display: flex;
-    flex-direction: column;
-}
-
 .sect2-block {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    gap: 50px;
 
 }
 
 .sect2-list-info {
-    gap: 50px;
+    display: flex;
+    align-items: center;
+    width: 450px;
+    gap: 23px;
 }
 
 .sect2-list-numero {
@@ -169,6 +178,38 @@ body {
     box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.25);
     color: var(--quinary-color);
     transition: all ease 0.2s;
+}
+
+.sect2-info {
+    display: flex;
+    height: 158px;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding-top: 18px;
+}
+
+.sect2-container {
+    width: 600px;
+    height: 230px;
+}
+
+.sect2-list-info h3 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.sect2-info p {
+    margin-left: 100px;
+    color: #B3B2B7;
+    font-size: 16.298px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 156.6%; /* 25.523px */
+    letter-spacing: -0.163px;
+    justify-content: center;
 }
 
 .section-3 {
@@ -248,6 +289,112 @@ body {
 }
 
 /* Footer */
+footer {
+    display: flex;
+    background-color: var(--footer-color);
+    height: 247px;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.social-media-icons { 
+    display: flex;
+    gap: 13px;
+}
+
+.footer-center {
+    display: flex;
+    width: 392.727px;
+    align-items: center;
+    justify-content: center;
+    gap: 219px;
+}
+
+.footer-center div ul li {
+    list-style: none;
+}
+
+.footer-center div ul { 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.footer-center div ul a {
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    white-space: nowrap; 
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    width: 272.81px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form-contact { 
+    display: flex;
+}
+
+.form-cnt {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 9px;
+}
+
+.text-form {
+    display: flex;
+    width: 201px;
+    height: 44px;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    border: 0px;
+    border-radius: 35px;
+}
+
+.form-contact button {
+    display: flex;
+    width: 63px;
+    height: 42px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 0px;
+    border-radius: 50px;
+    background: var(--primary-color);
+    box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.25);
+    color: var(--quinary-color);
+    transition: all ease 0.2s;
+    cursor: pointer;
+}
+
+.copyright {
+    width: 100%;
+}
+
+.copyright p {
+    font-size: 12.5px;
+    color: var(--copyright-color);
+    text-align: end;
+}
 
 
 
@@ -314,6 +461,43 @@ body {
     .section-1 img {
         width: 100vw;
         margin-bottom: 100px;
+    }
+
+    .sect2-different-between {
+        background-color: var(--secondary-color);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    .sect2-different-between h2 {
+        font-size: 36px;
+    }
+
+    .sect2-container{
+        width: 446px;
+    }
+
+    .sect2-list {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: var(--white-color);
+    }
+
+    .sect2-block {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .sect2-list-info {
+        width: 100%;
+    }
+
+    .sect2-info p {
+        width: 100%;
+        margin-left: 0px;
     }
 }
 
