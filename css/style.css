@@ -62,8 +62,10 @@ a {
     color: #242E5299;
 }
 
-.header-nav .fa-bars {
+.header-nav a.menu-icon {
     display: none;
+    font-size: 3rem;
+    color: #000;
 }
 
 /* Estilos de los botones */
@@ -359,14 +361,12 @@ div.right form button {
         display: none;
     }
 
-    .header-nav .fa-bars {
+    .header-nav a.menu-icon {
         display: flex;
-        font-size: 3rem;
-        color: #000;
     }
 
-    .header-nav-bar {
-        display: none;
+    ul.header-nav-bar {
+        display: flex;
         flex-direction: column;
         gap: 0;
         background-color: rgba(36, 0, 77, 0.8);
@@ -378,12 +378,17 @@ div.right form button {
         position: absolute;
         right: 0;
         top: 140px;
-        z-index: 1;
-        animation: fade-in 0.2s backwards;
+        z-index: 5;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-100%);
+        transition: all ease-in 0.2s;
     }
 
-    .header-nav-bar.active {
-        display: flex;
+    ul.header-nav-bar.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0%);
     }
 
     .header-nav-bar li {
@@ -519,17 +524,5 @@ div.right form button {
         position: relative;
         bottom: 0;
         right: 0;
-    }
-}
-
-/* Animaciones */
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
     }
 }
