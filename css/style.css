@@ -316,10 +316,10 @@ div.center ul {
     width: 100%;
 }
 
-
 div.center a {
     color: var(--white-color);
 }
+
 ul.list-left li, ul.list-right li {
     transition: all 0.2s ease-out;
 }
