@@ -316,8 +316,16 @@ div.center ul {
     width: 100%;
 }
 
+
 div.center a {
     color: var(--white-color);
+}
+ul.list-left li, ul.list-right li {
+    transition: all 0.2s ease-out;
+}
+
+ul.list-left li:hover, ul.list-right li:hover {
+    transform: scale(1.1);
 }
 
 div.right {
